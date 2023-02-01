@@ -1,0 +1,31 @@
+README
+Schoogle - Higher Education Information and Statistics Database
+Ian Manix and Janna Tanninen
+11/25/2022
+
+Run with "python server_whoosh.py"
+View at http://127.0.0.1:5000
+
+Pre-Reqs:
+
+	- need to run mySearcher.index() in server_whoosh.py to index documents. Must have files folder saved in same directory as server_whoosh.py. Will output an index folder to same directory as server_whoosh.py.
+
+	- need to run appropriate methods on adjacency_list in mergeJSONs.py to make sure you have a proper adjacency list to use for pageRank.py.
+
+	- need to run pageRank.py and output the file to the same folder as server_whoosh.py
+
+Folder Structure:
+
+Server_whoosh.py
+static
+	`----- styles
+				`---- CSS files (main.css, bootstrap.css)
+	`----- images
+templates
+	`----- HTML files (results.html, bootstrap.html)
+files (all crawled pages - used for indexing)
+index (indexed by whoosh)
+pageRanked JSON file
+adjacency_list JSON file
+CSV datafile
+

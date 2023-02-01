@@ -1,0 +1,42 @@
+README for index.py
+Janna Tanninen
+8/25/2022
+CS 454 - Info Retrieval
+
+Run with python index.py
+
+This will start an interactive session on the command line so you can perform live queries.
+
+Things you need to specify to perform a search:
+	(1) query - unlimited text input
+	(2) # of results - default is 10
+	(3) whether you want to search conjunctively or disjunctively
+
+*** If index has not been created or needs modified, uncomment line 114 in main to run:
+
+	line 114: index_docs("files", "indexdir", True)
+
+	- where files is the name of the directory that holds all of your documents i.e. your corpus
+
+	- indexdir is the name of the index directory (doesn't have to be created yet)
+
+	- and the Boolean represents whether or not the index already exists. Change to False if you want to re-index an existing dataset that has been modified.
+
+*** If the index already exists, line 114 should be commented out.
+
+
+Functions:
+
+def get_schema(): - returns the schema for the index
+
+def add_doc(writer, path): - adds a document to the index. called by both new_index() and incremental_index()
+
+def new_index(filesdir, indexdir): - creates a new index. never call directly - this will be called by index_docs() if necessary.
+
+def incremental_index(indexdir): - re-indexes documents on an already existing index. Will update documents if the modification time has changed, or if documents have been addded to or removed from the corpus.
+
+def index_docs(filesdir, indexdir, clean=False): - this is what you call to index documents. See lines 10 - 20 in the readme for an explanation. This is the only function that the user may need to modify in main.
+
+def search(indexdir, query): - searches the index for a specific query. Main is set up so user can search for queries through the command line but you could also hardcode queries by calling this in main with specific query.
+
+def index_size(indexdir): - returns the size of the index. 

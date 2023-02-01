@@ -1,0 +1,46 @@
+README
+Schoogle - Higher Education Information and Statistics Database
+Ian Manix and Janna Tanninen
+11/25/2022
+
+Run with "python server_whoosh.py"
+View at http://127.0.0.1:5000
+
+Pre-Reqs:
+
+	- need to have crawled data and adjacency_lists for said data. If you have multiple adjacency lists, run mergeJSONs.py. 
+
+	- need to run mySearcher.index() in server_whoosh.py to index documents. Must have files folder saved in same directory as server_whoosh.py. Will output an index folder to same directory as server_whoosh.py.
+
+	- need to run pageRank.py and output the file to the same folder as server_whoosh.py. The outputted JSON file will be opened and used when PageRank is added as a search parameter.
+
+Folder Structure:
+
+Crawler.py 	(what we used to gather data)
+Server_whoosh.py (Indexer and Runs App)
+static
+	`----- styles
+		`---- CSS files (main.css, bootstrap.css)
+	`----- images
+		`------ generated figures and graphs
+templates
+	`----- HTML files (index.html, original.html)
+files (all crawled pages - used for indexing)
+index (indexed by whoosh)
+reverse_index.json (adjacency list for ALL crawled pages)
+adj_list.json (adjacency list for USNews and Niche pages - used for PageRank)
+pageRanked (JSON file that holds pageRank value for every URL in adj_list.json)
+figures
+	`----- readCSVData.py
+	`----- figSelector.py
+	`----- graphFunctions.py
+	`----- csvs
+		`------ csv.data (from nces.ed.gov)
+jsonTest (directory that contains all adj_lists to be merged by mergeJSONs.py)
+jsonPR (directory that contains USNews and Niche adj_lists to be merged by mergeJSONs.py)
+advancedSearch.py
+mergeJSONs.py
+pageRank.py
+README (detailing how to run)
+
+

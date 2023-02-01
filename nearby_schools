@@ -1,0 +1,22 @@
+Nearby Schools
+
+Crawl each of these school websites to use for our demo.
+ - mix of public and private, 4 year and 2 year
+ - should be able to use cursor.startswith(seed) to stay within domain
+
+If we had the time and resources, we would parse the websites for every school in the US.
+
+Clark College - https://www.clark.edu
+University of Portland - https://www.up.edu
+University of Western States - https://www.uws.edu
+Mt. Hood Community College - https://www.mhcc.edu
+Portland State University - https://www.pdx.edu
+Washington State University Vancouver - https://www.vancouver.wsu.edu
+Clackamas Community College - https://www.clackamas.edu
+Multnomah University - https://www.multnomah.edu
+Lewis & Clark College - https://www.lclark.edu
+Reed College - https://www.reed.edu
+National University of Natural Medicine - https://nunm.edu
+Lower Columbia College - https://lowercolumbia.edu
+Willamette University - https://willamette.edu
+Western Oregon University - https://wou.edu

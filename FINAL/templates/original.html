@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href= "{{ url_for('static',filename='styles/main.css') }}">
+		<title>Welcome to the sample!!</title>
+	</head>
+
+	<body>
+		<form method="get" action="{{ url_for('return_results') }}">
+			<label for="searchterm">What do you want to search for:</label>
+			<input type="text" name="searchterm" /><input type="submit" value="Search" /><br/>
+			<div class="container">
+				<td><label for="exact_terms"> Include Specific Terms:</label>
+				<input type="text" name='exact_terms'/></td><br>
+				<td><label for="state"> State:</label>
+				<input type="text" name='state'/></td><br>
+				<td><label for="city"> City:</label>
+				<input type="text" name='city'/></td><br>
+				<td><label for="zipcode"> Zip Code:</label>
+				<input type="text" name='zipcode'/></td><br>
+				<td><label for="school_id"> School ID:</label>
+				<input type="text" name='school_id'/></td><br>
+				<td><label for="url"> Specific URL:</label>
+				<input type="text" name='url'/></td><br>
+				<td><label for="search_type">TF-IDF or PageRank:</label>
+				<select name="search_type" id="search_type">
+					<option value="tf-idf">TF-IDF</option>
+					<option value="pagerank">PageRank</option>
+				</select></td><br>
+				<td><label for="disjunct">Conjunctive or Disjunctive:</label>
+				<select name="disjunct" id="disjunct">
+					<option value="conjunctive">Conjunctive</option>
+					<option value="disjunctive">Disjunctive</option>
+				</select></td><br>
+				<td><label for="public">School Type:</label>
+				<select name=public id="public">
+					<option value="unspecified">Not Specified</option>
+					<option value="public">Public</option>
+					<option value="private-nonprofit">Private Non-Profit</option>
+					<option value="private-forprofit">Private For Profit</option>
+					<option value="admin-unit">Administrative Unit</option>
+					<option value="4-year-and-up">4 Year and Above</option>
+					<option value="2-year">2 Year</option>
+					<option value="less-than-2">Less than 2 Year</option>
+				</select></td><br>
+			</div>
+		</form>	
+	</body>	
+</html>
